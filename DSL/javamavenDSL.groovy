@@ -1,4 +1,4 @@
-job('/Learning-jobs/Udemy-Jenkins-Cero-Experto-2024/6-Jobs-DSL-Maven/Ejemplos/1-DSL-Ejemplo-job-Maven') {
+job('/Learning-jobs/Udemy-Jenkins-Cero-Experto-2024/6-Jobs-DSL-Maven/2-DSL-Job-Maven-git') {
     description('Java Maven App con DSL para el curso de Jenkins')
     scm {
         git('https://github.com/gamezssl/simple-java-maven-app.git', 'master') { node ->
@@ -17,7 +17,7 @@ job('/Learning-jobs/Udemy-Jenkins-Cero-Experto-2024/6-Jobs-DSL-Maven/Ejemplos/1-
         }
         shell('''
           echo "Entrega: Desplegando la aplicación" 
-          java -jar "/home/jenkins/agent/workspace/Learning-jobs/Udemy-Jenkins-Cero-Experto-2024/6-Jobs-DSL-Maven/Ejemplos/1-DSL-job-Maven/target/my-app-1.0-SNAPSHOT.jar"
+          java -jar "/home/jenkins/agent/workspace/Learning-jobs/Udemy-Jenkins-Cero-Experto-2024/6-Jobs-DSL-Maven/2-DSL-Job-Maven-git/target/my-app-1.0-SNAPSHOT.jar"
         ''')  
     }
     publishers {
